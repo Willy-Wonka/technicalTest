@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Technical Test App</title>
+</head>
+<body>
+<h1>Submit a post with title and description.</h1>
+<form action="/posts" method="POST">
+    <input type="text" placeholder="title" name="title">
+    <input type="text" placeholder="description" name="description">
+    <button type="submit">Submit</button>
+</form>
+
+<h2>A list of posts ordered by descending order</h2>
+<ul class="posts">
+    <% for(var i=posts.length-1; i>=0; i--) {%>
+    <li class="post">
+        <span><%= posts[i].title%></span>
+        <span><%= posts[i].description%></span>
+    </li>
+    <%}%>
+</ul>
+</body>
+</html>
