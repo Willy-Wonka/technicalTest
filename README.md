@@ -1,0 +1,2 @@
+# technicalTest
+simple blog
